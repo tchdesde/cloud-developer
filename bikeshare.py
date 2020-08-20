@@ -58,7 +58,7 @@ def get_filters():
         return city, month, day
         
     except Exception as e:
-        print('An exception has been occurred : {}'.format(e))
+        print('An exception has been occurred while getting filters: {}'.format(e))
     
 
         
@@ -230,16 +230,16 @@ def display_data(df):
                 print('\nInvalid answer!\n')
                 continue
             elif answer == 'yes':
-                print(df.iloc[raw_data : raw_data + 5])
-                raw_data += 5
+                print(df.iloc[raw_data : raw_data + 10])
+                raw_data += 10
                 while True :
-                    again = input("Do you want to see more 5 lines of raw data? Please type Yes or No : ").lower()
+                    again = input("Do you want to see more 10 lines of raw data? Please type Yes or No : ").lower()
                     if again not in ['yes', 'no']:
                         print('\nInvalid answer!\n')
                         continue
                     elif again == 'yes':
-                        print(df.iloc[raw_data : raw_data + 5])
-                        raw_data += 5
+                        print(df.iloc[raw_data : raw_data + 10])
+                        raw_data += 10
                     else:
                         break
                 break
