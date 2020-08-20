@@ -220,6 +220,7 @@ def user_stats(df,city):
     print('-'*40)
     
 def display_data(df):
+    """Raw data is displayed upon request by the user."""
     raw_data = 0
 
     try:
