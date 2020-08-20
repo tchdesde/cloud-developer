@@ -58,7 +58,7 @@ def get_filters():
         return city, month, day
         
     except Exception as e:
-        print('An exception has been occurred : {}'.format(e))
+        print('An exception has been occurred while getting filters: {}'.format(e))
     
 
         
