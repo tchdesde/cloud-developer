@@ -17,7 +17,7 @@ def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
     Returns:
-        (str) city - name of the city to analyze
+        (str) city - name of the city to analyze.
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
@@ -51,14 +51,14 @@ def get_filters():
             else:
                 break
         
-        print('-'*40)
+        print('-'*60)
         print('Your selection is that\nCity : {} , Month : {} , Day : {} '.format(city.title(),month.title(),day.title()))
-        print('-'*40)
+        print('-'*60)
         
         return city, month, day
         
     except Exception as e:
-        print('An exception has been occurred while getting filters: {}'.format(e))
+        print('An exception has been occurred : {}'.format(e))
     
 
         
@@ -220,6 +220,7 @@ def user_stats(df,city):
     print('-'*40)
     
 def display_data(df):
+    """Raw data is displayed upon request by the user."""
     raw_data = 0
 
     try:
@@ -230,16 +231,16 @@ def display_data(df):
                 print('\nInvalid answer!\n')
                 continue
             elif answer == 'yes':
-                print(df.iloc[raw_data : raw_data + 10])
-                raw_data += 10
+                print(df.iloc[raw_data : raw_data + 15])
+                raw_data += 15
                 while True :
-                    again = input("Do you want to see more 10 lines of raw data? Please type Yes or No : ").lower()
+                    again = input("Do you want to see more 15 lines of raw data? Please type Yes or No : ").lower()
                     if again not in ['yes', 'no']:
                         print('\nInvalid answer!\n')
                         continue
                     elif again == 'yes':
-                        print(df.iloc[raw_data : raw_data + 10])
-                        raw_data += 10
+                        print(df.iloc[raw_data : raw_data + 15])
+                        raw_data += 15
                     else:
                         break
                 break
