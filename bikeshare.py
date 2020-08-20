@@ -230,16 +230,16 @@ def display_data(df):
                 print('\nInvalid answer!\n')
                 continue
             elif answer == 'yes':
-                print(df.iloc[raw_data : raw_data + 5])
-                raw_data += 5
+                print(df.iloc[raw_data : raw_data + 15])
+                raw_data += 15
                 while True :
-                    again = input("Do you want to see more 5 lines of raw data? Please type Yes or No : ").lower()
+                    again = input("Do you want to see more 15 lines of raw data? Please type Yes or No : ").lower()
                     if again not in ['yes', 'no']:
                         print('\nInvalid answer!\n')
                         continue
                     elif again == 'yes':
-                        print(df.iloc[raw_data : raw_data + 5])
-                        raw_data += 5
+                        print(df.iloc[raw_data : raw_data + 15])
+                        raw_data += 15
                     else:
                         break
                 break
