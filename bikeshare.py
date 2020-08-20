@@ -100,7 +100,7 @@ def load_data(city, month, day):
         print('An exception has been occurred during loading data: {}'.format(e))
 
 def time_stats(df, city):
-    """Displays statistics on the most frequent times of travel."""
+    """Displays statistics on the most frequent times of travel according to city selected."""
 
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
