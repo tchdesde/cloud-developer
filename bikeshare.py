@@ -132,7 +132,7 @@ def time_stats(df, city):
     print('-'*40)
 
 def station_stats(df, city):
-    """Displays statistics on the most common stations and trip."""
+    """Displays statistics on the most common stations and trip according to city selected."""
 
     print('\nCalculating The Most common Stations and Trip...\n')
     start_time = time.time()
