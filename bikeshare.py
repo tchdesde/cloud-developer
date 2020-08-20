@@ -219,7 +219,37 @@ def user_stats(df,city):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
     
- 
+def display_data(df):
+    raw_data = 0
+
+    try:
+
+        while True:
+            answer = input("Do you want to see the raw data? Please type Yes or No : ").lower()
+            if answer not in ['yes', 'no']:
+                print('\nInvalid answer!\n')
+                continue
+            elif answer == 'yes':
+                print(df.iloc[raw_data : raw_data + 10])
+                raw_data += 10
+                while True :
+                    again = input("Do you want to see more 10 lines of raw data? Please type Yes or No : ").lower()
+                    if again not in ['yes', 'no']:
+                        print('\nInvalid answer!\n')
+                        continue
+                    elif again == 'yes':
+                        print(df.iloc[raw_data : raw_data + 10])
+                        raw_data += 10
+                    else:
+                        break
+                break
+            else:
+                break
+
+           
+    except Exception as e:
+        print('An exception has been occurred while displaying raw data : {}'.format(e))
+    
     
 
 def main():
@@ -231,7 +261,7 @@ def main():
         trip_duration_stats(df, city)
         user_stats(df,city)
         
-        --display_data(df)
+        display_data(df)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
